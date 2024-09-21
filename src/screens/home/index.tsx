@@ -9,19 +9,6 @@ import {Table, TableWrapper, Col} from 'react-native-table-component';
 
 import {Products, Transactions, Users} from '../../database';
 
-// var tableHead = [
-//   'Head',
-//   'Head2',
-//   'Head3',
-//   'Head4',
-//   'Head5',
-//   'Head6',
-//   'Head7',
-//   'Head8',
-//   'Head9',
-// ];
-// var tableData = [40, 60, 80, 100, 120, 140, 160, 180, 200];
-
 export const HomeScreen = () => {
   const navigation = useNavigation<AboutNavigationProp>();
 
