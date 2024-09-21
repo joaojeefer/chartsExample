@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { AboutScreen, HomeScreen, ProductsScreen, UserGraphScreen, UsersScreen } from '../screens';
+import { AboutScreen, HomeScreen, ProductsScreen, TransactionsScreen, UserGraphScreen, UsersScreen } from '../screens';
 import { RootRoutes, RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -34,6 +34,11 @@ const Routes: React.FC = () => {
           name={RootRoutes.USER_GRAPH}
           component={UserGraphScreen}
           options={{ title: 'Pontuação' }}
+        />
+        <Stack.Screen
+          name={RootRoutes.TRANSACTIONS}
+          component={TransactionsScreen}
+          options={{ title: 'Transações' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -6,7 +6,8 @@ export enum RootRoutes {
   HOME = 'Home',
   PRODUCTS = 'Products',
   USERS = 'Users',
-  USER_GRAPH = 'UserGraph'
+  USER_GRAPH = 'UserGraph',
+  TRANSACTIONS = 'Transactions',
 }
 
 export type RootStackParamList = {
@@ -15,7 +16,13 @@ export type RootStackParamList = {
   Products: undefined;
   Users: undefined;
   UserGraph: { userId: string };
+  Transactions: undefined;
 };
+
+export type HomeNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  RootRoutes.HOME
+>;
 
 export type AboutNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -38,3 +45,8 @@ export type UserGraphNavigationProp = NativeStackNavigationProp<
 >;
 
 export type UserGraphRouteProp = RouteProp<RootStackParamList, RootRoutes.USER_GRAPH>;
+
+export type TransactionsNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  RootRoutes.TRANSACTIONS
+>;
