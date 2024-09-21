@@ -1,4 +1,3 @@
-import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export enum RootRoutes {
@@ -6,7 +5,6 @@ export enum RootRoutes {
   HOME = 'Home',
   PRODUCTS = 'Products',
   USERS = 'Users',
-  USER_GRAPH = 'UserGraph',
   TRANSACTIONS = 'Transactions',
 }
 
@@ -38,13 +36,6 @@ export type UsersNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   RootRoutes.USERS
 >;
-
-export type UserGraphNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  RootRoutes.USER_GRAPH
->;
-
-export type UserGraphRouteProp = RouteProp<RootStackParamList, RootRoutes.USER_GRAPH>;
 
 export type TransactionsNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
