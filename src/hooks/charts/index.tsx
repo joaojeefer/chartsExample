@@ -1,10 +1,24 @@
 import { useEffect, useState } from 'react';
 import { Products, Transactions } from '../../database';
+import moment from 'moment';
 
+export type UserHistoryPointsGraph = { x: number, y: number }[];
 export type PointsByProductGraph = {xAxisValues: string[], yAxisValues: {y: number}[] };
 
 export function useCharts() {
+    const [userHistoryPoints, setUserHistoryPoints] = useState<UserHistoryPointsGraph>([]);
     const [pointsByProduct, setPointsByProduct] = useState<PointsByProductGraph | null>(null);
+
+    function createUserHistoryPointsChart(userId: number) {
+      const chartData = Transactions.filter(transaction => transaction.usuario_id === userId).map(transaction => {
+        return {
+          x: moment(transaction.data.split(' ')[0].replace(/-/g, '/'), 'YYYY/MM/DD').unix('X'),
+          y: transaction.pontos_movimentados,
+        };
+      });
+
+      setUserHistoryPoints(chartData);
+    }
 
     function createPointsByProductChart() {
         const productData = Products.map(product => {
@@ -31,5 +45,5 @@ export function useCharts() {
         createPointsByProductChart();
     }, []);
 
-    return {pointsByProduct};
+    return {userHistoryPoints, pointsByProduct, createUserHistoryPointsChart};
 }
