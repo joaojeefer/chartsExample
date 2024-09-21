@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, Text } from 'react-native';
 import { styles } from './styles';
 
-import { Users } from '../../database/users';
+import { Users } from '../../database';
 
 export const UsersScreen = () => {
   return (
