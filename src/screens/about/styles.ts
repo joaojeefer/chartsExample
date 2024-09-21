@@ -8,11 +8,14 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleText: {
-    fontSize: metrics.font_size.small,
+    fontSize: metrics.font_size.medium,
     fontWeight: 'bold',
   },
   subtitleText: {
-    fontSize: metrics.font_size.xx_small,
+    fontSize: metrics.font_size.x_small,
     fontWeight: 'bold',
+  },
+  spacing: {
+    marginBottom: metrics.spacing.small,
   },
 });

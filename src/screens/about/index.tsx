@@ -7,7 +7,7 @@ export const AboutScreen = () => {
     <View style={styles.container}>
       <Text style={styles.titleText}>Engenharia de Software</Text>
       <Text style={styles.subtitleText}>Engenharia de Software para Web</Text>
-      <Text></Text>
+      <View style={styles.spacing} />
       <Text style={styles.subtitleText}>Grupo 5</Text>
       <Text>Caina dos Santos Mota</Text>
       <Text>Diego Francio</Text>
