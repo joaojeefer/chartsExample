@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {metrics} from '../../res';
+import {colors, metrics} from '../../res';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,10 +10,15 @@ export const styles = StyleSheet.create({
   titleText: {
     fontSize: metrics.font_size.medium,
     fontWeight: 'bold',
+    color: colors.secondary.dark,
   },
   subtitleText: {
     fontSize: metrics.font_size.x_small,
     fontWeight: 'bold',
+    color: colors.secondary.dark,
+  },
+  text: {
+    color: colors.secondary.dark,
   },
   spacing: {
     marginBottom: metrics.spacing.small,
