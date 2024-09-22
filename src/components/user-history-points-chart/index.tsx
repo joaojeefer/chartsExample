@@ -10,7 +10,7 @@ import { colors, metrics } from '../../res';
 
 export const UserHistoryPointsChart: React.FC = () => {
     const [open, setOpen] = useState(false);
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(1);
     const [dropDownItems, setDropDownItems] = useState<DropDownItem[]>([]);
 
     const {createUserHistoryPointsChart, userHistoryPoints} = useCharts();

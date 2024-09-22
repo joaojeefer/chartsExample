@@ -1,8 +1,10 @@
 import React from 'react';
-import { processColor, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { HorizontalBarChart } from 'react-native-charts-wrapper';
 import { useCharts } from '../../hooks';
 import { styles } from './styles';
+import { generateNamedColors } from '../../utils';
+import { Products } from '../../database';
 
 export const PointsByProductChart: React.FC = () => {
   const {pointsByProduct} = useCharts();
@@ -13,7 +15,7 @@ export const PointsByProductChart: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Quantidade de pontos por produto</Text>
+      <Text style={styles.title}>Pontos x produto</Text>
       <HorizontalBarChart
         style={styles.chart}
         data={{
@@ -21,7 +23,7 @@ export const PointsByProductChart: React.FC = () => {
             values: pointsByProduct.yAxisValues,
             label: 'Produtos',
             config: {
-              colors: [processColor('red'), processColor('blue'), processColor('green')],
+              colors: generateNamedColors(Products.length).reverse(),
             },
             }],
 

@@ -24,5 +24,6 @@ export const styles = StyleSheet.create({
     tableBodyText: {
         width: 100,
         textAlign: 'center',
+        color: colors.secondary.dark,
     },
 });

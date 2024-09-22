@@ -36,13 +36,13 @@ export function useCharts() {
         });
 
         setPointsByProduct({
-            xAxisValues: productData.map(item => item.label),
-            yAxisValues: productData.map(item => ({y: item.points})),
+            xAxisValues: productData.map(item => item.label).reverse(),
+            yAxisValues: productData.map(item => ({y: item.points})).reverse(),
         });
     }
 
     useEffect(() => {
-        createPointsByProductChart();
+      createPointsByProductChart();
     }, []);
 
     return {userHistoryPoints, pointsByProduct, createUserHistoryPointsChart};
