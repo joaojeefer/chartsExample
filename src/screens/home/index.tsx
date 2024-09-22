@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import {styles} from './styles';
 import {HomeNavigationProp, RootRoutes} from '../../routes/types';
 
-import { PointsByProductChart, UserHistoryPointsChart } from '../../components';
+import { PointsByProductChart, PointsByProductPerUserChart, UserHistoryPointsChart } from '../../components';
 
 export const HomeScreen = () => {
 
@@ -36,6 +36,7 @@ export const HomeScreen = () => {
       <ScrollView contentContainerStyle={styles.scrolledContainer}>
         <UserHistoryPointsChart />
         <PointsByProductChart />
+        <PointsByProductPerUserChart />
       </ScrollView>
     </View>
   );

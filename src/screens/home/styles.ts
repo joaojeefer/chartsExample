@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   nav: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
     marginBottom: metrics.spacing.small,
   },
   menu: {
@@ -17,6 +18,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.secondary.dark,
     marginBottom: metrics.spacing.xx_small,
+    marginHorizontal: metrics.spacing.xx_small,
   },
   scrolledContainer: {
     flexGrow: 1,
