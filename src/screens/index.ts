@@ -1,5 +1,5 @@
 export { AboutScreen } from './about';
-export { HomeScreen } from './home';
+export { DashboardScreen } from './dashboard';
 export { ProductsScreen } from './products';
 export { UsersScreen } from './users';
 export { TransactionsScreen } from './transactions';

@@ -2,13 +2,12 @@ import React from 'react';
 import {Text, View, ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {styles} from './styles';
-import {HomeNavigationProp, RootRoutes} from '../../routes/types';
+import {DashboardNavigationProp, RootRoutes} from '../../routes/types';
 
 import { PointsByProductChart, PointsByProductPerUserChart, UserHistoryPointsChart } from '../../components';
 
-export const HomeScreen = () => {
-
-  const navigation = useNavigation<HomeNavigationProp>();
+export const DashboardScreen = () => {
+  const navigation = useNavigation<DashboardNavigationProp>();
 
   function navigateTo(
     screen: RootRoutes.ABOUT | RootRoutes.PRODUCTS | RootRoutes.TRANSACTIONS | RootRoutes.USERS,

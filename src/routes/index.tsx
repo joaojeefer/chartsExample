@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { AboutScreen, HomeScreen, ProductsScreen, TransactionsScreen, UsersScreen } from '../screens';
+import { AboutScreen, DashboardScreen, ProductsScreen, TransactionsScreen, UsersScreen } from '../screens';
 import { RootRoutes, RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -11,8 +11,8 @@ const Routes: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name={RootRoutes.HOME}
-          component={HomeScreen}
+          name={RootRoutes.DASHBOARD}
+          component={DashboardScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

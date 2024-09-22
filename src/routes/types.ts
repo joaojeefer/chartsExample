@@ -2,7 +2,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export enum RootRoutes {
   ABOUT = 'About',
-  HOME = 'Home',
+  DASHBOARD = 'Dashboard',
   PRODUCTS = 'Products',
   USERS = 'Users',
   TRANSACTIONS = 'Transactions',
@@ -10,16 +10,16 @@ export enum RootRoutes {
 
 export type RootStackParamList = {
   About: undefined;
-  Home: undefined;
+  Dashboard: undefined;
   Products: undefined;
   Users: undefined;
   UserGraph: { userId: string };
   Transactions: undefined;
 };
 
-export type HomeNavigationProp = NativeStackNavigationProp<
+export type DashboardNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  RootRoutes.HOME
+  RootRoutes.DASHBOARD
 >;
 
 export type AboutNavigationProp = NativeStackNavigationProp<
